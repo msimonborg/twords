@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'twords'
+
+Twords.config do |config|
+  config.throw_aways = %w[the for to and at our of in rt a with &amp; @barbaracomstock @repcomstock]
+  config.range       = 30
+  config.up_to { Time.now }
+
+  config.twitter_client do |twitter|
+    twitter.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
+    twitter.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
+    twitter.access_token        = ENV['TWITTER_ACCESS_TOKEN']
+    twitter.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
+  end
+end
+
+require "pry"
+Pry.start
+
