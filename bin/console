@@ -5,8 +5,8 @@ require 'bundler/setup'
 require 'twords'
 
 Twords.config do |config|
-  config.throw_aways = %w[the for to and at our of in rt a with &amp; @barbaracomstock @repcomstock]
-  config.range       = 30
+  config.rejects = %w[the for to and at our of in rt a with &amp; @barbaracomstock @repcomstock]
+  config.range   = 30
   config.up_to { Time.now }
 
   config.twitter_client do |twitter|

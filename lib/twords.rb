@@ -6,7 +6,7 @@ require 'twitter'
 require 'twords/version'
 
 # Twords.config do |config|
-#   config.throw_aways = %w[the for and a i of if]
+#   config.rejects = %w[the for and a i of if]
 #   config.max_age     = 14
 #   config.up_to { Time.now }
 #
@@ -27,7 +27,7 @@ require 'twords/version'
 # # => { "butts"=>35, "poo"=>32, "pups"=>28, ... }
 class Twords
   class << self
-    attr_reader :throw_aways, :range, :client, :up_to_block
+    attr_reader :rejects, :range, :client, :up_to_block
 
     def config(&block)
       class_eval(&block)
@@ -37,8 +37,8 @@ class Twords
       @client = Twitter::REST::Client.new(&block)
     end
 
-    def throw_aways=(*args)
-      @throw_aways = args.flatten
+    def rejects=(*args)
+      @rejects = args.flatten
     end
 
     def range=(integer)
@@ -93,9 +93,9 @@ class Twords
     return timeline if age_of_tweet_in_days(timeline.last) > range
     @requests += 1
     timeline += client.user_timeline(
-        screen_name,
-        max_id: timeline.last.id - 1,
-        count: 200
+      screen_name,
+      max_id: timeline.last.id - 1,
+      count: 200
     )
     fetch_older_tweets(timeline, screen_name)
   end
@@ -115,7 +115,7 @@ class Twords
       tweet_with_full_text = fetch_tweet_with_full_text(tweet)
       words_array = tweet_with_full_text.attrs[:full_text].downcase.split(' ')
       words_array.each do |word|
-        next if self.class.throw_aways.include?(word)
+        next if self.class.rejects.include?(word)
         if words.has_key?(word)
           words[word] += 1
         else
