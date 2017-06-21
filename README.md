@@ -1,4 +1,4 @@
-# Twords
+![twords](http://msimonborg.com/twords/twords.png)
 
 ## Twitter word clouds
 
