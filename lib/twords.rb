@@ -74,6 +74,7 @@ class Twords
   def sort_words
     words.sort { |a, b| b.last <=> a.last }
   end
+  alias words_forward sort_words
 
   def timeline
     @_timeline ||= screen_names.map { |name| fetch_timeline(name) }.flatten

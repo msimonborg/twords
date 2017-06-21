@@ -36,13 +36,16 @@ Twords.config do |config|
   end
 end
 
-twords = Twords.new 'user_one', 'user_two'
+twords = Twords.new 'user_one', 'user_two' # A list of Twitter handles to include in the count.
 
 twords.audit
 # => true
 
 twords.words
-# => { "butts"=>35, "poo"=>32, "pups"=>28, ... }
+# => { "butts"=>32, "poo"=>28, "pups"=>36, ... }
+
+twords.words_forward # Sort descending. Alias #sort_words
+# => [["pups", 36], ["butts", 32], ["poo", 28], ...]
 ```
 
 ## Development
