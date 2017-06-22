@@ -24,11 +24,13 @@ Or install it yourself as:
 
 ```ruby
 Twords.config do |config|
-  config.rejects = %w[the for and a i of if]
-  config.range   = 14
-  config.include_hashtags = false # default
-  config.include_uris     = false # default
+  config.rejects = %w[are this is from be on the for to and at our of in rt a with &amp;] # these words will not be counted (example, not a default; you must provide your own list)
+  config.range   = 14 # number of days to check, no default
+  
+  config.include_hashtags = false # default, excludes words beginning with '#'
+  config.include_uris     = false # default, uses URI#regexp to match
   config.include_mentions = false # default, excludes words beginning with '@'
+  
   config.up_to { Time.now } # The block must return an object that responds to #to_time. The time is lazy evaluated and the range is counted backward from here.
   
   config.twitter_client do |twitter|
