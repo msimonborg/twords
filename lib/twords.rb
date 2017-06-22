@@ -143,17 +143,21 @@ class Twords
   def fetch_older_tweets(timeline, screen_name)
     return timeline if age_of_tweet_in_days(timeline.last) > range
     @requests += 1
+    first_count = timeline.count
     timeline += client.user_timeline(
       screen_name,
       tweet_mode: 'extended',
       max_id: timeline.last.id - 1,
       count: 200
     )
+    second_count = timeline.count
+    return timeline if second_count == first_count
     fetch_older_tweets(timeline, screen_name)
   end
 
   def tweets
     @_tweets ||= timeline.each_with_object([]) do |tweet, memo|
+      next if tweet.created_at > up_to_time
       memo << tweet if age_of_tweet_in_days(tweet) <= range
     end
   end
@@ -167,7 +171,11 @@ class Twords
   end
 
   def age_of_tweet_in_days(tweet)
-    (self.class.up_to_block.call.to_time - tweet.created_at) / 86_400
+    (up_to_time - tweet.created_at) / 86_400
+  end
+
+  def up_to_time
+    self.class.up_to_block.call.to_time
   end
 
   def count_words
