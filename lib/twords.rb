@@ -28,8 +28,9 @@ require 'twords/version'
 # # => { "butts"=>35, "poo"=>32, "pups"=>28, ... }
 class Twords
   class << self
-    attr_reader :rejects, :range, :client, :up_to_block, :include_hashtags, :include_uris,
+    attr_reader :rejects, :client, :up_to_block, :include_hashtags, :include_uris,
                 :include_mentions
+    attr_accessor :range
 
     def config
       yield self
@@ -60,15 +61,11 @@ class Twords
     end
 
     def not_a_boolean_error(boolean)
-      raise ArgumentError, 'argument must be a booolean value' unless is_a_boolean?(boolean)
+      raise ArgumentError, 'argument must be a booolean value' unless a_boolean?(boolean)
     end
 
-    def is_a_boolean?(other)
+    def a_boolean?(other)
       [true, false].include?(other)
-    end
-
-    def range=(integer)
-      @range = integer
     end
 
     def up_to(&time_block)
@@ -155,23 +152,31 @@ class Twords
     fetch_older_tweets(timeline, screen_name)
   end
 
-  def recent_tweets
-    @_recent_tweets ||= timeline.each_with_object([]) do |tweet, memo|
+  def tweets
+    @_tweets ||= timeline.each_with_object([]) do |tweet, memo|
       memo << tweet if age_of_tweet_in_days(tweet) <= range
-    end.sort { |a, b| b.created_at <=> a.created_at }
+    end
+  end
+
+  def sort_tweets
+    tweets.sort { |a, b| b.created_at <=> a.created_at }
+  end
+
+  def sort_tweets!
+    tweets.sort! { |a, b| b.created_at <=> a.created_at }
   end
 
   def age_of_tweet_in_days(tweet)
-    (self.class.up_to_block.call.to_time - tweet.created_at) / 86400
+    (self.class.up_to_block.call.to_time - tweet.created_at) / 86_400
   end
 
   def count_words
     words.clear
-    recent_tweets.each do |tweet|
+    tweets.each do |tweet|
       words_array = tweet.attrs[:full_text].downcase.split(' ')
       words_array.each do |word|
         next if should_be_skipped?(word)
-        if words.has_key?(word)
+        if words.key?(word)
           words[word] += 1
         else
           words[word] = 1
@@ -190,8 +195,8 @@ class Twords
     audit
   end
 
-  def recent_tweets_count
-    @_recent_tweets_count ||= recent_tweets.count
+  def tweets_count
+    @_tweets_count ||= tweets.count
   end
 
   def to_csv
@@ -203,21 +208,21 @@ class Twords
     end
   end
 
-  def write_to_csv(filename: nil)
-    filename = filename || 'twords_report.csv'
-    write_file(filename, :to_csv)
+  def write_to_csv(opts = {})
+    filename = opts.fetch(:filename) { 'twords_report.csv' }
+    write_file(filename, :to_csv, opts)
   end
 
   def to_json
     sort_words.to_h.to_json
   end
 
-  def write_to_json(filename: nil)
-    filename = filename || 'twords_report.json'
-    write_file(filename, :to_json)
+  def write_to_json(opts = {})
+    filename = opts.fetch(:filename) { 'twords_report.json' }
+    write_file(filename, :to_json, opts)
   end
 
-  def write_file(filename, method)
-    File.open(filename, 'w') { |file| file.write send(method) }
+  def write_file(filename, method, opts = {})
+    File.open(filename, 'w', opts) { |file| file.write send(method) }
   end
 end

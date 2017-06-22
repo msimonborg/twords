@@ -20,6 +20,5 @@ Twords.config do |config|
   end
 end
 
-require "pry"
+require 'pry'
 Pry.start
-
