@@ -99,17 +99,17 @@ class Twords
 
   def hashtag?(word)
     return false if self.class.include_hashtags
-    word.match?(/#(\w+)/)
+    !(word =~ /#(\w+)/).nil?
   end
 
   def uri?(word)
     return false if self.class.include_uris
-    word.match?(URI.regexp)
+    !(word =~ URI.regexp).nil?
   end
 
   def mention?(word)
     return false if self.class.include_mentions
-    word.match?(/@(\w+)/)
+    !(word =~ /@(\w+)/).nil?
   end
 
   def hashtags
