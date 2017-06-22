@@ -101,7 +101,7 @@ class Twords
 
   def hashtag?(word)
     return false if self.class.include_hashtags
-    word.match?(/#/)
+    word.match?(/#(\w+)/)
   end
 
   def uri?(word)
@@ -111,7 +111,7 @@ class Twords
 
   def mention?(word)
     return false if self.class.include_mentions
-    word.match?(/@/)
+    word.match?(/@(\w+)/)
   end
 
   def hashtags

@@ -26,7 +26,10 @@ Or install it yourself as:
 Twords.config do |config|
   config.rejects = %w[the for and a i of if]
   config.range   = 14
-  config.up_to { Time.now } # A time object to be lazy evaluated. The range is counted backward from here.
+  config.include_hashtags = false # default
+  config.include_uris     = false # default
+  config.include_mentions = false # default, excludes words beginning with '@'
+  config.up_to { Time.now } # The block must return an object that responds to #to_time. The time is lazy evaluated and the range is counted backward from here.
   
   config.twitter_client do |twitter|
     twitter.consumer_key        = YOUR_TWITTER_CONSUMER_KEY
