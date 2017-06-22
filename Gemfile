@@ -7,6 +7,7 @@ gemspec
 
 group :development, :test do
   gem 'pry'
+  gem 'pyr'
   gem 'rspec'
   gem 'rubocop'
 end

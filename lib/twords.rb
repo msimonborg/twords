@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'csv'
 require 'twitter'
 require 'uri'
 
@@ -191,5 +192,32 @@ class Twords
 
   def recent_tweets_count
     @_recent_tweets_count ||= recent_tweets.count
+  end
+
+  def to_csv
+    CSV.generate do |csv|
+      csv << %w[word count]
+      sort_words.each do |word_count|
+        csv << word_count
+      end
+    end
+  end
+
+  def write_to_csv(filename: nil)
+    filename = filename || 'twords_report.csv'
+    write_file(filename, :to_csv)
+  end
+
+  def to_json
+    sort_words.to_h.to_json
+  end
+
+  def write_to_json(filename: nil)
+    filename = filename || 'twords_report.json'
+    write_file(filename, :to_json)
+  end
+
+  def write_file(filename, method)
+    File.open(filename, 'w') { |file| file.write send(method) }
   end
 end
