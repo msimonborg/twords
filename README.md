@@ -24,8 +24,8 @@ Or install it yourself as:
 
 ```ruby
 Twords.config do |config|
-  config.rejects  = %w[the for and a i of if]
-  config.range        = 14
+  config.rejects = %w[the for and a i of if]
+  config.range   = 14
   config.up_to { Time.now } # A time object to be lazy evaluated. The range is counted backward from here.
   
   config.twitter_client do |twitter|
