@@ -5,9 +5,12 @@ require 'bundler/setup'
 require 'twords'
 
 Twords.config do |config|
-  config.rejects = %w[the for to and at our of in rt a with &amp; @barbaracomstock @repcomstock]
+  config.rejects = %w[are this is from be on the for to and at our of in rt a with &amp;]
   config.range   = 30
   config.up_to { Time.now }
+  config.include_hashtags = false
+  config.include_uris     = false
+  config.include_mentions = false
 
   config.twitter_client do |twitter|
     twitter.consumer_key        = ENV['TWITTER_CONSUMER_KEY']

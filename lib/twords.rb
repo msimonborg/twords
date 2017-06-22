@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'date'
 require 'twitter'
+require 'uri'
 
 require 'twords/version'
 
@@ -27,10 +27,11 @@ require 'twords/version'
 # # => { "butts"=>35, "poo"=>32, "pups"=>28, ... }
 class Twords
   class << self
-    attr_reader :rejects, :range, :client, :up_to_block
+    attr_reader :rejects, :range, :client, :up_to_block, :include_hashtags, :include_uris,
+                :include_mentions
 
-    def config(&block)
-      class_eval(&block)
+    def config
+      yield self
     end
 
     def twitter_client(&block)
@@ -41,12 +42,35 @@ class Twords
       @rejects = args.flatten
     end
 
+    def include_hashtags=(boolean)
+      not_a_boolean_error(boolean)
+      @include_hashtags = boolean
+    end
+
+    def include_uris=(boolean)
+      not_a_boolean_error(boolean)
+      @include_uris = boolean
+    end
+    alias include_urls include_uris
+
+    def include_mentions=(boolean)
+      not_a_boolean_error(boolean)
+      @include_mentions = boolean
+    end
+
+    def not_a_boolean_error(boolean)
+      raise ArgumentError, 'argument must be a booolean value' unless is_a_boolean?(boolean)
+    end
+
+    def is_a_boolean?(other)
+      [true, false].include?(other)
+    end
+
     def range=(integer)
       @range = integer
     end
 
     def up_to(&time_block)
-      raise ArgumentError, 'object must respond to #call' unless time_block.respond_to?(:call)
       @up_to_block = time_block
     end
   end
@@ -54,7 +78,7 @@ class Twords
   attr_reader :screen_names, :words, :requests, :client
 
   def initialize(*screen_names)
-    @screen_names = screen_names
+    @screen_names = screen_names.flatten
     @words        = {}
     @requests     = 0
   end
@@ -67,8 +91,35 @@ class Twords
     @_range ||= self.class.range
   end
 
+  def rejects
+    @_rejects ||= self.class.rejects
+  end
+
   def audited?
     @audited
+  end
+
+  def hashtag?(word)
+    return false if self.class.include_hashtags
+    word.match?(/#/)
+  end
+
+  def uri?(word)
+    return false if self.class.include_uris
+    word.match?(URI.regexp)
+  end
+
+  def mention?(word)
+    return false if self.class.include_mentions
+    word.match?(/@/)
+  end
+
+  def hashtags
+    /#/
+  end
+
+  def should_be_skipped?(word)
+    rejects.include?(word) || hashtag?(word) || uri?(word) || mention?(word)
   end
 
   def sort_words
@@ -84,9 +135,11 @@ class Twords
   def fetch_timeline(screen_name)
     return [] if screen_name.to_s.empty?
     @requests += 1
-    timeline = client.user_timeline(screen_name, count: 200)
+    timeline = client.user_timeline(screen_name, tweet_mode: 'extended', count: 200)
     return timeline if timeline.empty?
-    fetch_older_tweets(timeline, screen_name)
+    timeline = fetch_older_tweets(timeline, screen_name)
+    puts "Fetched #{screen_name}'s timeline"
+    timeline
   end
 
   def fetch_older_tweets(timeline, screen_name)
@@ -94,6 +147,7 @@ class Twords
     @requests += 1
     timeline += client.user_timeline(
       screen_name,
+      tweet_mode: 'extended',
       max_id: timeline.last.id - 1,
       count: 200
     )
@@ -107,15 +161,15 @@ class Twords
   end
 
   def age_of_tweet_in_days(tweet)
-    (self.class.up_to_block.call - tweet.created_at) / 60 / 60 / 24
+    (self.class.up_to_block.call.to_time - tweet.created_at) / 86400
   end
 
   def count_words
+    words.clear
     recent_tweets.each do |tweet|
-      tweet_with_full_text = fetch_tweet_with_full_text(tweet)
-      words_array = tweet_with_full_text.attrs[:full_text].downcase.split(' ')
+      words_array = tweet.attrs[:full_text].downcase.split(' ')
       words_array.each do |word|
-        next if self.class.rejects.include?(word)
+        next if should_be_skipped?(word)
         if words.has_key?(word)
           words[word] += 1
         else
@@ -125,14 +179,14 @@ class Twords
     end
   end
 
-  def fetch_tweet_with_full_text(tweet)
-    @requests += 1
-    client.status(tweet.id, tweet_mode: 'extended')
-  end
-
   def audit
     count_words unless audited?
     @audited = true
+  end
+
+  def audit!
+    @audited = false
+    audit
   end
 
   def recent_tweets_count
