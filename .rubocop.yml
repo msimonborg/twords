@@ -3,3 +3,14 @@ AllCops:
 
 Metrics/LineLength:
   Max: 100
+
+Metrics/BlockLength:
+  Exclude:
+    - 'pyr.gemspec'
+    - 'spec/**/*'
+    - 'Rakefile'
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '[]'
+    '%w': '[]'

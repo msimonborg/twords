@@ -121,7 +121,8 @@ class Twords
     end
     alias include_urls= include_uris=
 
-    # Set whether @-mentions should be counted. If true, any word beginning with "@" will be ignored.
+    # Set whether @-mentions should be counted.
+    # If true, any word beginning with "@" will be ignored.
     #
     # @param boolean [true, false] will raise an error if the value is not a Boolean value
     def include_mentions=(boolean)
@@ -129,16 +130,17 @@ class Twords
       @include_mentions = boolean
     end
 
-    # Takes a block and stores for lazy evaluation to define the end of the time range being checked.
-    # The return value of the block must respond to #to_time and return a Time object when called.
+    # Takes a block and stores for lazy evaluation to define the end of the
+    # time range being checked. The return value of the block must respond
+    # to #to_time and return a Time object when called.
     #
     # @return [Proc]
     def up_to(&time_block)
       @up_to_block = time_block
     end
 
-    # Calls the Proc value of #up_to_block and calls #to_time on the return value. Expects a Time object
-    # to be returned.
+    # Calls the Proc value of #up_to_block and calls #to_time on the return value.
+    # Expects a Time object to be returned.
     #
     # @return [Time]
     def up_to_time
