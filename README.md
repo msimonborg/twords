@@ -1,6 +1,7 @@
 ![twords](http://msimonborg.com/twords/twords.png)
 
 [![Gem Version](https://badge.fury.io/rb/twords.svg)](https://badge.fury.io/rb/twords)
+[![Code Climate](https://codeclimate.com/github/msimonborg/twords/badges/gpa.svg)](https://codeclimate.com/github/msimonborg/twords)
 [![Inline docs](http://inch-ci.org/github/msimonborg/twords.svg?branch=master)](http://inch-ci.org/github/msimonborg/twords)
 
 ## Twitter word clouds
