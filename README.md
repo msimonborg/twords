@@ -1,5 +1,7 @@
 ![twords](http://msimonborg.com/twords/twords.png)
 
+[![Gem Version](https://badge.fury.io/rb/twords.svg)](https://badge.fury.io/rb/twords)
+
 ## Twitter word clouds
 
 Count the occurrences of words in a tweeter's tweets.
