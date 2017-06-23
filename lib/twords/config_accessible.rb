@@ -5,6 +5,9 @@ class Twords
   module ConfigAccessible
     module_function
 
+    # Provides a private method to access the shared config when included in a Module or Class
+    #
+    # @return [Twords::Configuration]
     def config
       Twords.config
     end

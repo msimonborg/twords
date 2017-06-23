@@ -78,18 +78,18 @@ class Twords
 
     private
 
-    # private method
+    # @api private
     def set_defaults
       ivars = %i[include_uris include_hashtags include_mentions range client up_to_block rejects]
       ivars.each { |ivar| instance_variable_set("@#{ivar}", DEFAULT_OPTIONS[ivar]) }
     end
 
-    # private method
+    # @api private
     def a_boolean?(other)
       [true, false].include?(other)
     end
 
-    # private method
+    # @api private
     def not_a_boolean_error(boolean)
       raise ArgumentError, 'argument must be a booolean value' unless a_boolean?(boolean)
     end

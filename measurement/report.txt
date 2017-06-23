@@ -1,0 +1,225 @@
+lib/twords.rb:36: Twords.config: The @api tag should be specified
+lib/twords.rb:36: Twords.config: The @api tag must be either public, semipublic or private
+lib/twords.rb:36: Twords.config: The public/semipublic method should have an example specified
+lib/twords.rb:36: Twords.config: The method summary should be specified
+lib/twords.rb:36: Twords.config: The @return tag should be specified
+lib/twords.rb:41: Twords.reset_config!: The @api tag should be specified
+lib/twords.rb:41: Twords.reset_config!: The @api tag must be either public, semipublic or private
+lib/twords.rb:41: Twords.reset_config!: The public/semipublic method should have an example specified
+lib/twords.rb:41: Twords.reset_config!: The method summary should be specified
+lib/twords.rb:41: Twords.reset_config!: The @return tag should be specified
+lib/twords.rb:45: Twords.client: The @api tag should be specified
+lib/twords.rb:45: Twords.client: The @api tag must be either public, semipublic or private
+lib/twords.rb:45: Twords.client: The public/semipublic method should have an example specified
+lib/twords.rb:45: Twords.client: The method summary should be specified
+lib/twords.rb:45: Twords.client: The @return tag should be specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible.config: The @api tag should be specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible.config: The @api tag must be either public, semipublic or private
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible.config: The public/semipublic method should have an example specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible.config: The method summary should be specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible.config: The @return tag should be specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible#config: The @api tag should be specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible#config: The @api tag must be either public, semipublic or private
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible#config: A method with private visibility must have an @api tag of private
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible#config: The public/semipublic method should have an example specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible#config: The method summary should be specified
+lib/twords/config_accessible.rb:8: Twords::ConfigAccessible#config: The @return tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_hashtags: The @api tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_hashtags: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:34: Twords::Configuration#include_hashtags: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_hashtags: The @return tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#up_to_block: The @api tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#up_to_block: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:34: Twords::Configuration#up_to_block: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:34: Twords::Configuration#up_to_block: The @return tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_mentions: The @api tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_mentions: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:34: Twords::Configuration#include_mentions: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_mentions: The @return tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_uris: The @api tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_uris: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:34: Twords::Configuration#include_uris: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:34: Twords::Configuration#include_uris: The @return tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#rejects: The @api tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#rejects: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:34: Twords::Configuration#rejects: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:34: Twords::Configuration#rejects: The @return tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#client: The @api tag should be specified
+lib/twords/configuration.rb:34: Twords::Configuration#client: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:34: Twords::Configuration#client: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:34: Twords::Configuration#client: The @return tag should be specified
+lib/twords/configuration.rb:37: Twords::Configuration#range=: The @api tag should be specified
+lib/twords/configuration.rb:37: Twords::Configuration#range=: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:37: Twords::Configuration#range=: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:37: Twords::Configuration#range=: The @return tag should be specified
+lib/twords/configuration.rb:37: Twords::Configuration#range: The @api tag should be specified
+lib/twords/configuration.rb:37: Twords::Configuration#range: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:37: Twords::Configuration#range: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:37: Twords::Configuration#range: The @return tag should be specified
+lib/twords/configuration.rb:39: Twords::Configuration#initialize: The @api tag should be specified
+lib/twords/configuration.rb:39: Twords::Configuration#initialize: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:39: Twords::Configuration#initialize: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:39: Twords::Configuration#initialize: The method summary should be specified
+lib/twords/configuration.rb:43: Twords::Configuration#reset!: The @api tag should be specified
+lib/twords/configuration.rb:43: Twords::Configuration#reset!: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:43: Twords::Configuration#reset!: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:43: Twords::Configuration#reset!: The method summary should be specified
+lib/twords/configuration.rb:43: Twords::Configuration#reset!: The @return tag should be specified
+lib/twords/configuration.rb:47: Twords::Configuration#twitter_client: The @api tag should be specified
+lib/twords/configuration.rb:47: Twords::Configuration#twitter_client: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:47: Twords::Configuration#twitter_client: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:47: Twords::Configuration#twitter_client: The method summary should be specified
+lib/twords/configuration.rb:47: Twords::Configuration#twitter_client: The @return tag should be specified
+lib/twords/configuration.rb:51: Twords::Configuration#rejects=: The @api tag should be specified
+lib/twords/configuration.rb:51: Twords::Configuration#rejects=: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:51: Twords::Configuration#rejects=: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:51: Twords::Configuration#rejects=: The method summary should be specified
+lib/twords/configuration.rb:51: Twords::Configuration#rejects=: The @return tag should be specified
+lib/twords/configuration.rb:55: Twords::Configuration#include_hashtags=: The @api tag should be specified
+lib/twords/configuration.rb:55: Twords::Configuration#include_hashtags=: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:55: Twords::Configuration#include_hashtags=: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:55: Twords::Configuration#include_hashtags=: The method summary should be specified
+lib/twords/configuration.rb:55: Twords::Configuration#include_hashtags=: The @return tag should be specified
+lib/twords/configuration.rb:60: Twords::Configuration#include_uris=: The @api tag should be specified
+lib/twords/configuration.rb:60: Twords::Configuration#include_uris=: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:60: Twords::Configuration#include_uris=: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:60: Twords::Configuration#include_uris=: The method summary should be specified
+lib/twords/configuration.rb:60: Twords::Configuration#include_uris=: The @return tag should be specified
+lib/twords/configuration.rb:64: Twords::Configuration#include_urls=: The @api tag should be specified
+lib/twords/configuration.rb:64: Twords::Configuration#include_urls=: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:64: Twords::Configuration#include_urls=: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:64: Twords::Configuration#include_urls=: The method summary should be specified
+lib/twords/configuration.rb:64: Twords::Configuration#include_urls=: The @return tag should be specified
+lib/twords/configuration.rb:66: Twords::Configuration#include_mentions=: The @api tag should be specified
+lib/twords/configuration.rb:66: Twords::Configuration#include_mentions=: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:66: Twords::Configuration#include_mentions=: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:66: Twords::Configuration#include_mentions=: The method summary should be specified
+lib/twords/configuration.rb:66: Twords::Configuration#include_mentions=: The @return tag should be specified
+lib/twords/configuration.rb:71: Twords::Configuration#up_to: The @api tag should be specified
+lib/twords/configuration.rb:71: Twords::Configuration#up_to: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:71: Twords::Configuration#up_to: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:71: Twords::Configuration#up_to: The method summary should be specified
+lib/twords/configuration.rb:71: Twords::Configuration#up_to: The @return tag should be specified
+lib/twords/configuration.rb:75: Twords::Configuration#up_to_time: The @api tag should be specified
+lib/twords/configuration.rb:75: Twords::Configuration#up_to_time: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:75: Twords::Configuration#up_to_time: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:75: Twords::Configuration#up_to_time: The method summary should be specified
+lib/twords/configuration.rb:75: Twords::Configuration#up_to_time: The @return tag should be specified
+lib/twords/configuration.rb:82: Twords::Configuration#set_defaults: The @api tag should be specified
+lib/twords/configuration.rb:82: Twords::Configuration#set_defaults: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:82: Twords::Configuration#set_defaults: A method with private visibility must have an @api tag of private
+lib/twords/configuration.rb:82: Twords::Configuration#set_defaults: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:82: Twords::Configuration#set_defaults: The @return tag should be specified
+lib/twords/configuration.rb:88: Twords::Configuration#a_boolean?: The @api tag should be specified
+lib/twords/configuration.rb:88: Twords::Configuration#a_boolean?: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:88: Twords::Configuration#a_boolean?: A method with private visibility must have an @api tag of private
+lib/twords/configuration.rb:88: Twords::Configuration#a_boolean?: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:93: Twords::Configuration#not_a_boolean_error: The @api tag should be specified
+lib/twords/configuration.rb:93: Twords::Configuration#not_a_boolean_error: The @api tag must be either public, semipublic or private
+lib/twords/configuration.rb:93: Twords::Configuration#not_a_boolean_error: A method with private visibility must have an @api tag of private
+lib/twords/configuration.rb:93: Twords::Configuration#not_a_boolean_error: The public/semipublic method should have an example specified
+lib/twords/configuration.rb:93: Twords::Configuration#not_a_boolean_error: The @return tag should be specified
+lib/twords/instance_methods.rb:18: Twords#screen_names: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:24: Twords#words: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:31: Twords#initialize: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:42: Twords#audited?: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:50: Twords#audit: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:50: Twords#audit: The method summary should be less than 80 characters in length
+lib/twords/instance_methods.rb:50: Twords#audit: The method summary should not end in a period
+lib/twords/instance_methods.rb:59: Twords#audit!: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:73: Twords#sort_words: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:76: Twords#words_forward: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:82: Twords#tweets: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:90: Twords#sort_tweets: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:98: Twords#sort_tweets!: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:106: Twords#tweets_count: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:114: Twords#total_word_count: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:114: Twords#total_word_count: The method summary should be less than 80 characters in length
+lib/twords/instance_methods.rb:114: Twords#total_word_count: The method summary should not end in a period
+lib/twords/instance_methods.rb:122: Twords#percentages: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:132: Twords#sort_percentages: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:140: Twords#to_csv: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:140: Twords#to_csv: The method summary should be less than 80 characters in length
+lib/twords/instance_methods.rb:155: Twords#write_to_csv: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:155: Twords#write_to_csv: The method summary should not end in a period
+lib/twords/instance_methods.rb:165: Twords#to_json: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:165: Twords#to_json: The method summary should be less than 80 characters in length
+lib/twords/instance_methods.rb:165: Twords#to_json: The method summary should not end in a period
+lib/twords/instance_methods.rb:165: Twords#to_json: The method summary should be a single line
+lib/twords/instance_methods.rb:175: Twords#write_to_json: The public/semipublic method should have an example specified
+lib/twords/instance_methods.rb:175: Twords#write_to_json: The method summary should not end in a period
+lib/twords/instance_methods.rb:183: Twords#client: The method summary should be specified
+lib/twords/instance_methods.rb:183: Twords#client: The @return tag should be specified
+lib/twords/instance_methods.rb:188: Twords#count_words: The method summary should be specified
+lib/twords/instance_methods.rb:188: Twords#count_words: The @return tag should be specified
+lib/twords/instance_methods.rb:199: Twords#words_array: The method summary should be specified
+lib/twords/instance_methods.rb:199: Twords#words_array: The @return tag should be specified
+lib/twords/instance_methods.rb:204: Twords#percentage: The method summary should be specified
+lib/twords/instance_methods.rb:204: Twords#percentage: The @return tag should be specified
+lib/twords/instance_methods.rb:209: Twords#write_file: The method summary should be specified
+lib/twords/instance_methods.rb:209: Twords#write_file: The @return tag should be specified
+lib/twords/twitter_client.rb:10: Twords::TwitterClient#client: The @api tag should be specified
+lib/twords/twitter_client.rb:10: Twords::TwitterClient#client: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:10: Twords::TwitterClient#client: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:10: Twords::TwitterClient#client: The @return tag should be specified
+lib/twords/twitter_client.rb:12: Twords::TwitterClient#initialize: The @api tag should be specified
+lib/twords/twitter_client.rb:12: Twords::TwitterClient#initialize: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:12: Twords::TwitterClient#initialize: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:12: Twords::TwitterClient#initialize: The method summary should be specified
+lib/twords/twitter_client.rb:16: Twords::TwitterClient#filter_tweets: The @api tag should be specified
+lib/twords/twitter_client.rb:16: Twords::TwitterClient#filter_tweets: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:16: Twords::TwitterClient#filter_tweets: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:16: Twords::TwitterClient#filter_tweets: The method summary should be specified
+lib/twords/twitter_client.rb:16: Twords::TwitterClient#filter_tweets: The @return tag should be specified
+lib/twords/twitter_client.rb:26: Twords::TwitterClient#full_timeline: The @api tag should be specified
+lib/twords/twitter_client.rb:26: Twords::TwitterClient#full_timeline: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:26: Twords::TwitterClient#full_timeline: A method with private visibility must have an @api tag of private
+lib/twords/twitter_client.rb:26: Twords::TwitterClient#full_timeline: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:26: Twords::TwitterClient#full_timeline: The @return tag should be specified
+lib/twords/twitter_client.rb:31: Twords::TwitterClient#fetch_user_timeline: The @api tag should be specified
+lib/twords/twitter_client.rb:31: Twords::TwitterClient#fetch_user_timeline: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:31: Twords::TwitterClient#fetch_user_timeline: A method with private visibility must have an @api tag of private
+lib/twords/twitter_client.rb:31: Twords::TwitterClient#fetch_user_timeline: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:31: Twords::TwitterClient#fetch_user_timeline: The @return tag should be specified
+lib/twords/twitter_client.rb:44: Twords::TwitterClient#age_of_tweet_in_days: The @api tag should be specified
+lib/twords/twitter_client.rb:44: Twords::TwitterClient#age_of_tweet_in_days: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:44: Twords::TwitterClient#age_of_tweet_in_days: A method with private visibility must have an @api tag of private
+lib/twords/twitter_client.rb:44: Twords::TwitterClient#age_of_tweet_in_days: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:44: Twords::TwitterClient#age_of_tweet_in_days: The @return tag should be specified
+lib/twords/twitter_client.rb:49: Twords::TwitterClient#up_to_time: The @api tag should be specified
+lib/twords/twitter_client.rb:49: Twords::TwitterClient#up_to_time: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:49: Twords::TwitterClient#up_to_time: A method with private visibility must have an @api tag of private
+lib/twords/twitter_client.rb:49: Twords::TwitterClient#up_to_time: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:49: Twords::TwitterClient#up_to_time: The @return tag should be specified
+lib/twords/twitter_client.rb:54: Twords::TwitterClient#range: The @api tag should be specified
+lib/twords/twitter_client.rb:54: Twords::TwitterClient#range: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:54: Twords::TwitterClient#range: A method with private visibility must have an @api tag of private
+lib/twords/twitter_client.rb:54: Twords::TwitterClient#range: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:54: Twords::TwitterClient#range: The @return tag should be specified
+lib/twords/twitter_client.rb:59: Twords::TwitterClient#fetch_older_tweets: The @api tag should be specified
+lib/twords/twitter_client.rb:59: Twords::TwitterClient#fetch_older_tweets: The @api tag must be either public, semipublic or private
+lib/twords/twitter_client.rb:59: Twords::TwitterClient#fetch_older_tweets: A method with private visibility must have an @api tag of private
+lib/twords/twitter_client.rb:59: Twords::TwitterClient#fetch_older_tweets: The public/semipublic method should have an example specified
+lib/twords/twitter_client.rb:59: Twords::TwitterClient#fetch_older_tweets: The @return tag should be specified
+lib/twords/word_matcher.rb:11: Twords::WordMatcher.should_be_skipped?: The @api tag should be specified
+lib/twords/word_matcher.rb:11: Twords::WordMatcher.should_be_skipped?: The @api tag must be either public, semipublic or private
+lib/twords/word_matcher.rb:11: Twords::WordMatcher.should_be_skipped?: The public/semipublic method should have an example specified
+lib/twords/word_matcher.rb:11: Twords::WordMatcher.should_be_skipped?: The method summary should be specified
+lib/twords/word_matcher.rb:15: Twords::WordMatcher.reject?: The @api tag should be specified
+lib/twords/word_matcher.rb:15: Twords::WordMatcher.reject?: The @api tag must be either public, semipublic or private
+lib/twords/word_matcher.rb:15: Twords::WordMatcher.reject?: The public/semipublic method should have an example specified
+lib/twords/word_matcher.rb:15: Twords::WordMatcher.reject?: The method summary should be specified
+lib/twords/word_matcher.rb:19: Twords::WordMatcher.hashtag?: The @api tag should be specified
+lib/twords/word_matcher.rb:19: Twords::WordMatcher.hashtag?: The @api tag must be either public, semipublic or private
+lib/twords/word_matcher.rb:19: Twords::WordMatcher.hashtag?: The public/semipublic method should have an example specified
+lib/twords/word_matcher.rb:19: Twords::WordMatcher.hashtag?: The method summary should be specified
+lib/twords/word_matcher.rb:24: Twords::WordMatcher.uri?: The @api tag should be specified
+lib/twords/word_matcher.rb:24: Twords::WordMatcher.uri?: The @api tag must be either public, semipublic or private
+lib/twords/word_matcher.rb:24: Twords::WordMatcher.uri?: The public/semipublic method should have an example specified
+lib/twords/word_matcher.rb:24: Twords::WordMatcher.uri?: The method summary should be specified
+lib/twords/word_matcher.rb:29: Twords::WordMatcher.mention?: The @api tag should be specified
+lib/twords/word_matcher.rb:29: Twords::WordMatcher.mention?: The @api tag must be either public, semipublic or private
+lib/twords/word_matcher.rb:29: Twords::WordMatcher.mention?: The public/semipublic method should have an example specified
+lib/twords/word_matcher.rb:29: Twords::WordMatcher.mention?: The method summary should be specified
+
+YARD-Coverage: 65.1%  Success: 417  Failed: 223  Total: 640
