@@ -10,7 +10,7 @@ class Twords
     # A Twitter::REST::Client that provides an interface to the Twitter API
     #
     # @api public
-    # @returns [Twitter::REST::Client]
+    # @return [Twitter::REST::Client]
     attr_reader :client
 
     # Initializes a new Twords::TwitterClient object and assigns to the @client instance variable

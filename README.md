@@ -22,6 +22,10 @@ Or install it yourself as:
 
     $ gem install twords
 
+## Documentation
+
+[http://www.rubydoc.info/gems/twords][documentation]
+
 ## Usage
 
 Twords takes a configuration block, and if it doesn't find one it will set the following defaults:
