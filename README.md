@@ -24,7 +24,9 @@ Or install it yourself as:
 
 ## Documentation
 
-[http://www.rubydoc.info/gems/twords][documentation]
+[http://rdoc.info/gems/twords][documentation]
+
+[documentation]: http://rdoc.info/gems/twords
 
 ## Usage
 
