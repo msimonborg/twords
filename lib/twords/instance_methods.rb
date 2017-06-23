@@ -150,8 +150,8 @@ class Twords
   #
   # @api public
   # @return [Integer] representing the byte count of the file
-  # @param opts [Hash] customizable file writing options. All but :filename are passed to File#open
-  # @option opts [String] :filename A relative pathname to define the destination of the new file
+  # @param opts [Hash] File writing options. All except for :filename are passed to File#open.
+  # @option opts [String] :filename A relative pathname. Defaults to 'twords_report.csv'
   def write_to_csv(opts = {})
     filename = opts.fetch(:filename) { 'twords_report.csv' }
     write_file(filename, :to_csv, opts)
@@ -170,8 +170,8 @@ class Twords
   #
   # @api public
   # @return [Integer] representing the byte count of the file
-  # @param opts [Hash] customizable file writing options. All but :filename are passed to File#open
-  # @option opts [String] :filename A relative pathname to define the destination of the new file
+  # @param opts [Hash] customizable file writing options. All but :filename arepassed to File#open
+  # @option opts [String] :filename A relative pathname. Defaults to 'twords_report.json'
   def write_to_json(opts = {})
     filename = opts.fetch(:filename) { 'twords_report.json' }
     write_file(filename, :to_json, opts)

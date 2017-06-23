@@ -7,7 +7,7 @@ class Twords
   class TwitterClient
     include ConfigAccessible
 
-    # A Twitter::REST::Client that provides an interface to the Twitter API
+    # A Twitter::REST::Client that provides a direct interface to the Twitter API
     #
     # @api public
     # @return [Twitter::REST::Client]
@@ -25,6 +25,7 @@ class Twords
     # @api public
     # for block { |twitter| ... }
     # @yield [Twitter::REST::Client] yields the Twitter::REST::Client for configuration
+    # @see Twords::Configuration#twitter_client
     # @see https://github.com/sferik/twitter#configuration
     def initialize(&block)
       @client = Twitter::REST::Client.new(&block)
@@ -35,6 +36,7 @@ class Twords
     #
     # @api public
     # @param screen_names [Array<String>] the twitter screen names from which to pull the tweets
+    # @return [Array<Twitter::Tweet>]
     def filter_tweets(screen_names)
       full_timeline(screen_names).each_with_object([]) do |tweet, memo|
         next if tweet.created_at > up_to_time
