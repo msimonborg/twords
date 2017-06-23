@@ -12,7 +12,12 @@ Gem::Specification.new do |spec|
   spec.email         = ['msimonborg@gmail.com']
 
   spec.summary       = 'Twitter word clouds'
-  spec.description   = 'Twitter word clouds'
+  spec.description   = 'Twitter word clouds. Analyse the frequency of word occurrences for a user or list of users. '\
+    'Configurable - set the words to ignore, the range of dates to look at, and whether to include hashtags, '\
+    '@-mentions, and URLs. Customize your Twitter configuration, too. Sensible defaults are provided for all options. '\
+    'Look at the data in different ways. Easily convert and/or export to CSV and JSON. Change configuration options '\
+    'on the fly and re-audit with ease.'
+
   spec.homepage      = 'https://github.com/msimonborg/twords'
   spec.license       = 'MIT'
 
