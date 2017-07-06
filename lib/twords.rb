@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'twords/follower_bot_cop'
 require 'twords/configuration'
 require 'twords/instance_methods'
 require 'twords/version'
