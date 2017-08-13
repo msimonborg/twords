@@ -1,5 +1,4 @@
 require 'csv'
-require 'pry'
 require 'twords/config_accessible'
 
 class Twords
