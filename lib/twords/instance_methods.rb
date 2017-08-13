@@ -71,6 +71,7 @@ class Twords
   # @api public
   # @return [Array<Array<String, Integer>>]
   def sort_words
+    audit
     @_sort_words ||= words.sort { |a, b| b.last <=> a.last }
   end
   alias words_forward sort_words
