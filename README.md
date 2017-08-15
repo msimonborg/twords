@@ -10,6 +10,8 @@ Count the occurrences of words in a tweeter's tweets.
 
 Configurable - set the words to ignore, the range of dates to look at, and whether to include hashtags, @-mentions, and URLs. Customize your Twitter configuration, too. Sensible defaults are provided for all options. Look at the data in different ways. Easily convert and/or export to CSV and JSON. Change configuration options on the fly and re-audit with ease.
 
+See the [demo app](https://github.com/msimonborg/trump-twords) hosted on [heroku](https://trump-twords.herokuapp.com). This gem only provides the words and counts to be consumed by your app, it does not generate webpages
+
 ## Installation
 
 Add this line to your application's Gemfile:
